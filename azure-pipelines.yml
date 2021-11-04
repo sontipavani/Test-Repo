@@ -17,3 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Subscription'
+    azureResourceManagerConnection: 'Free Trial(2a214586-0708-478e-a58d-84ca2898f33f)'
+    subscriptionId: '2a214586-0708-478e-a58d-84ca2898f33f'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/login/oauth/authorize?client_id=Iv1.3b08983b5115f30d&state=https%3A%2F%2Fdev.azure.com%3A443%2Fpavanisonti0380%2F0ecbbd45-81c4-471a-adff-e1c4a5e6e360%2F_admin%2F_services%2Fcallback%2Fgithubapp%3Fproject_id%3D0ecbbd45-81c4-471a-adff-e1c4a5e6e360%26experience%3Dpipeline-edit%26redirectUrl%3Dhttps%253A%252F%252Fdev.azure.com%252Fpavanisonti0380%252FFirst%252F_apps%252Fhub%252Fms.vss-build-web.ci-designer-hub%253FpipelineId%253D2%2526branch%253Dmaster%26installation_id%3D20503680&scope=repo&redirect_uri=https%3A%2F%2Fapp.vssps.visualstudio.com%2Foauth2%2Freceive'
+    deploymentMode: 'Validation'
